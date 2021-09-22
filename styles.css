@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    color: #FAFAFA;
+}
+
+body {
+    height: 100vh;
+    background-color: hsl(226, 43%, 10%);
+}
+
+#contanier {
+    width: 1000px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-areas: 
+        "p w pl st"
+        "p e so sc";
+}
+
+#profile {
+    grid-area: p;
+    height: 100%;
+}
+
+#work {
+    grid-area: w;
+    background-color: hsl(15, 100%, 70%);
+}
+
+#play {
+    grid-area: pl;
+    background-color: hsl(195, 74%, 62%);
+}
+
+#study {
+    grid-area: st;
+    background-color: hsl(348, 100%, 68%);
+}
+
+#exercise {
+    grid-area: e;
+    background-color: hsl(145, 58%, 55%);
+}
+
+#social {
+    grid-area: so;
+    background-color: hsl(264, 64%, 52%);
+}
+
+#self-care {
+    grid-area: sc;
+    background-color: hsl(43, 84%, 65%);
+}
+
+
+#person-info {
+    background-color: hsl(246, 80%, 60%);
+    height: 65%;
+    border-radius: 10px;
+    padding: 30px;
+    z-index: 2;
+    transform: translateY(0%);
+    position: relative;
+}
+
+#info-type {
+    background-color: hsl(235, 46%, 20%);
+    height: 40%;
+    border-radius: 10px;
+    padding: 30px;
+    z-index: 1;
+    transform: translateY(-18%);
+    position: relative;
+}
+
+.status {
+    margin: 10px;
+    border-radius: 10px;  
+    width: 230px;
+}
+
+.state {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: hsl(235, 46%, 20%);
+    transition: 0.2s ease-in-out;
+    height: 80%;
+    cursor: pointer;
+    display: grid;
+    grid-template-areas: 
+        "n e"
+        "h h"
+        "l l";
+}
+
+.state:hover {
+    background-color: #34397b;
+}
+
+
+li {
+    display: block;
+    color: hsl(235, 45%, 61%);
+    margin: 15px 0 15px 15px;
+    transform: translateY(130%);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+li:hover {
+    color: white;
+}
+
+#weekly {
+    color: white;
+}
+
+.ellipsis {
+    grid-area: e;
+    cursor: pointer;
+}
+
+.state-type {
+    grid-area: n;
+}
+
+.state-hrs {
+    grid-area: h;
+}
+
+.state-last-week {
+    grid-area: l;
+}
+
+#profile-picture {
+    width: 80px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.status-img {
+    transform: translateX(180%);
+}
+
+.ellipsis {
+    justify-self: flex-end;
+}
+
+h1 {
+    font-weight: 300;
+    transform: translateY(60%);
+}
+
+small {
+    font-weight: 400;
+    font-size: 12px;
+    color: hsl(236, 100%, 87%);
+    position: relative;
+    top: 15%;
+}
+
+.state-type {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.state-hrs {
+    font-weight: 300;
+    font-size: 40px;
+    margin-top: 15px;
+}
+
+.state-last-week {
+    font-weight: 400;
+    font-size: 12px;
+    color: hsl(235, 45%, 61%);
+}
+
+
+@media screen and (max-width: 771px) {
+    body {
+        height: fit-content;
+    }
+
+    #contanier {
+        margin: 60px 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+
+    #person-info {
+        display: grid;
+        grid-template-areas: 
+            "p s"
+            "p h";
+    }
+
+    #profile-picture {
+        grid-area: p;
+    }
+
+    small {
+        grid-area: s;
+    }
+
+    h1 {
+        grid-area: h;
+        font-size: 25px;
+        transform: translateY(0);
+    }
+
+    br {
+        display: none;
+    }
+
+    li {
+        display: inline-block;
+        margin: 20px 20px 0 20px;
+        width: fit-content;
+        transform: translate(20%, 0);
+    }
+
+    .status {
+        margin: 20px 10px;
+        width: auto;
+    }
+
+    .status-img {
+        transform: translateX(300%);
+    }
+
+    .state {
+        grid-template-areas: 
+            "n e"
+            "h l";
+    }
+
+    .ellipsis {
+        grid-area: e;
+    }
+
+    .state-type {
+        grid-area: n;
+    }
+
+    .state-hrs {
+        grid-area: h;
+    }
+
+    .state-last-week {
+        grid-area: l;
+        justify-self: flex-end;
+        align-self: flex-end;
+        margin-bottom: 20px;
+    }
+}
