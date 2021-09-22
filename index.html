@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+    </style>
+  </head>
+  <body>
+    <div id="contanier">
+       <div id="profile" class="status">
+         <div id="person-info">
+           <div id="profile-picture">
+             <img id="profile-img" src="images/image-jeremy.png" alt="Profile picture"> 
+           </div>
+           <small>Report for</small>
+           <h1>Jeremy <br>Robson</h1>
+         </div>
+         <div id="info-type">
+           <ul>
+             <li id="daily">Daily</li>
+             <li id="weekly">Weekly</li>
+             <li id="monthly">Monthly</li>
+           </ul>
+         </div>
+       </div>
+       <div id="work" class="status">
+         <img id="work-img" class="status-img" src="images/icon-work.svg" alt="Work icon">
+         <div id="work-state" class="state">
+           <img class="ellipsis" src="images/icon-ellipsis.svg" alt="Ellipsis icon">
+           <p id="work-txt" class="state-type">Work</p>
+           <p id="work-hrs" class="state-hrs">32hrs</p>
+           <p id="work-last-week" class="state-last-week">Last Week - 36hrs</p> 
+         </div>
+       </div>
+       <div id="play" class="status">
+        <img id="play-img" class="status-img" src="images/icon-play.svg" alt="Play icon">
+        <div id="play-state" class="state">
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="Ellipsis icon">
+          <p id="play-txt" class="state-type">Play</p>
+          <p id="play-hrs" class="state-hrs">10hrs</p>
+          <p id="play-last-week" class="state-last-week">Last Week - 8hrs</p> 
+        </div>
+       </div>
+       <div id="study" class="status">
+        <img id="study-img" class="status-img" src="images/icon-study.svg" alt="Study icon">
+        <div id="study-state" class="state">
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="Ellipsis icon">
+          <p id="study-txt" class="state-type">Study</p>
+          <p id="study-hrs" class="state-hrs">4hrs</p>
+          <p id="study-last-week" class="state-last-week">Last Week - 7hrs</p> 
+        </div>
+       </div>
+       <div id="exercise" class="status">
+        <img id="exercise-img" class="status-img" src="images/icon-exercise.svg" alt="Exercise icon">
+        <div id="exercise-state" class="state">
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="Ellipsis icon">
+          <p id="exercise-txt" class="state-type">Exercise</p>
+          <p id="exercise-hrs" class="state-hrs">4hrs</p>
+          <p id="exercise-last-week" class="state-last-week">Last Week - 5hrs</p> 
+        </div>
+       </div>
+       <div id="social" class="status">
+        <img id="social-img" class="status-img" src="images/icon-social.svg" alt="Social icon">
+        <div id="social-state" class="state">
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="Ellipsis icon">
+          <p id="social-txt" class="state-type">Social</p>
+          <p id="social-hrs" class="state-hrs">5hrs</p>
+          <p id="social-last-week" class="state-last-week">Last Week - 10hrs</p> 
+        </div>
+       </div>
+       <div id="self-care" class="status">
+        <img id="self-care-img" class="status-img" src="images/icon-self-care.svg" alt="Self-care icon">
+        <div id="self-care-state" class="state">
+          <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="Ellipsis icon">
+          <p id="self-care-txt" class="state-type">Self Care</p>
+          <p id="self-care-hrs" class="state-hrs">2hrs</p>
+          <p id="self-care-last-week" class="state-last-week">Last Week - 2hrs</p> 
+        </div>
+       </div>
+    </div>
+  </body>
+</html>
